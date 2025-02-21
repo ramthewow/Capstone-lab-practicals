@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Employee Form</title>
+    
+    <script type="text/javascript">
+        function abc() {
+            alert("Ram");
+        }
+
+        function show() {
+            const name = document.getElementById("t1").value;
+            const address = document.getElementById("t2").value;
+            const city = document.getElementById("t3").value;
+
+            const genderRadios = document.getElementsByName("t4");
+            let gender = "Not selected";
+            for (let radio of genderRadios) {
+                if (radio.checked) {
+                    gender = radio.value;
+                    break;
+                }
+            }
+
+            const vehicleCheckboxes = document.getElementsByName("t5");
+            const vehicles = Array.from(vehicleCheckboxes)
+                .filter(checkbox => checkbox.checked)
+                .map(checkbox => checkbox.value)
+                .join(", ") || "None";
+
+            
+
+            const displayArea = document.getElementById("t1nm");
+            displayArea.innerHTML = `
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Address:</strong> ${address}</p>
+                <p><strong>Office:</strong> ${city}</p>
+                <p><strong>Gender:</strong> ${gender}</p>
+                <p><strong>Department:</strong> ${vehicles}</p>
+            `;
+        }
+    </script>
+
+</head>
+
+<body>
+    
+    <h1 onclick="abc()" style="font-weight: bold;">Employee Form</h1>
+    <form>
+        <label for="t1">NAME</label>
+        <input type="text" id="t1" /><br><br>
+
+        <label for="t2">ADDRESS</label>
+        <textarea id="t2" rows="4" cols="50"></textarea><br><br>
+
+        <label for="t3">OFFICE LOCATION</label>
+        <select id="t3">
+            <option value="Delhi">Delhi</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Chennai">Chennai</option>
+        </select><br><br>
+
+        <p>GENDER</p>
+        <input type="radio" id="male" name="t4" value="Male" />
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="t4" value="Female" />
+        <label for="female">Female</label><br><br>
+
+        <p>ROLE</p>
+        <input type="radio" id="mkt" name="t5" value="Marketing" />
+        <label for="mkt">Marketing</label><br>
+        <input type="radio" id="dev" name="t5" value="Development" />
+        <label for="dev">Development</label><br>
+        <input type="radio" id="mgt" name="t5" value="Management" />
+        <label for="mgt">Management</label><br>
+        <input type="radio" id="log" name="t5" value="Logistics" />
+        <label for="log">Logistics</label><br><br>
+
+        <label for="photo">PHOTO</label>
+        <input type="file" id="photo" /><br><br>
+
+        <input type="button" value="Show Data" onclick="show()" />
+    </form>
+    
+    <hr>
+    
+    <span id="t1nm"></span>
+
+</body>
+</html>

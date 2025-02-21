@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function abc()
+        {
+            alert("Ram")
+        }
+
+        function show()
+        {
+            var data=document.getElementById("t1nm").value 
+            document.getElementById("t1nm").innerHTML //Incomplete here, rest is ok i think
+            alert(data)
+        }
+    </script>
+</head>
+<body>
+    
+    <h1 onclick="abc()">Employee form</h1>
+    <form action="abcsam">
+    Name <input type="text" id="t1" onclick="show()" /><br>
+    
+    Address <textarea id="t2" rows="4" cols="80"></textarea>
+    
+    City <select id="t3">
+        <option value="Del">Delhi</option>
+        <option value="Kol">Kolkata</option>
+        <option value="Mum">Mumbai</option>
+        <option value="Che">Chennai</option>
+    </select><br>
+    
+    Gender<br>
+    <input type="radio" id="t4" name="t4">Male<br>
+    <input type="radio" id="t5" name="t4">Female<br>
+    <input type="button" value="Show data" onclick="show()">
+    
+    Vehicles<br>
+    <input type="checkbox" name="t5">Car<br>
+    <input type="checkbox" name="t5">Scooter<br>
+    <input type="checkbox" name="t5">Bike<br>
+
+    Photo<br>
+    <input type="file"/>
+
+</form>
+<span id="t1nm"></span>
+</body>
+</html>
