@@ -5,7 +5,7 @@
 Working with Git and GitHub
 
 ## Practical 2
-Multiple commit
+Demonstrating multiple commit
 
 ## Practical 3
 Going back in time
@@ -120,5 +120,19 @@ with ejs and MongoDB
 ## Practical 30 
 Check RESTful API https://www.tutorialspoint.com/expressjs/expressjs_restful_apis.htm with Postman
 
+## Practical 31
+Create Hello World App in ReactJS
 
+## Practical 32
+Make your own component with name Greet and display it
+
+## Practical 33
+Make a class component and render it on browser
+
+## Practical 34
+Using props with functional component
+
+## Practical 35
+Download and run any MERN stack application with CRUD functionality. 
+Then prove one to many and many to many relationship from the backend.
 
