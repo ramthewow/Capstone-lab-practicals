@@ -120,8 +120,10 @@ with ejs and MongoDB
 ## Practical 30 
 Check RESTful API https://www.tutorialspoint.com/expressjs/expressjs_restful_apis.htm with Postman
 
+### (use npm start for react apps)
+
 ## Practical 31
-Create Hello World App in ReactJS
+Create Hello World App in ReactJS 
 
 ## Practical 32
 Make your own component with name Greet and display it
@@ -136,3 +138,7 @@ Using props with functional component
 Download and run any MERN stack application with CRUD functionality. 
 Then prove one to many and many to many relationship from the backend.
 
+## Practical 36
+Refer: https://react.dev/learn/your-first-component
+Make Gallery and Profile component with your photograph
+Try to do in both the ways - In same App.js file and separate file for component
